@@ -2,11 +2,12 @@
 - Allocate property list and append new string entry to the property list
 
 ```rust
- let mut proplist = Proplist::new().ok_or("")?;
+let mut proplist = Proplist::new().ok_or("")?;
 proplist
 	.set_str(
 		pulse::proplist::properties::APPLICATION_NAME,
-		"SinkController")
+		"SinkController",
+		)
 		.unwrap();
 ```
 
@@ -55,8 +56,8 @@ let handler = Handler {
 }
 ```
 
-2. Get the default sink
-- Create helper function wait_for_operation, it should take Operation as its only argument, iterate until operation.get_state returns State::Done enum
+2. List all available devices
+- Create helper function wait_for_operation, it should take Operation and handler as its arguments, it will iterate until operation.get_state returns State::Done enum
 
 ```rust
 fn wait_for_operation<G: ?Sized>(
@@ -83,62 +84,7 @@ fn wait_for_operation<G: ?Sized>(
 }
 ```
 
-- Retrieve default sink name from the server info on introspect
-
-```rust
-let server: Rc<RefCell<Option<Option<String>>>> = Rc::new(RefCell::new(Some(None)));
-{
-	let server = server.clone();
-    let op = handler.introspect.get_server_info(move |result| {
-	    server
-            .borrow_mut()         
-            .replace(
-	            result.default_sink_name.as_ref().map(|cow|cow.to_string()));
-            });
-            wait_for_operation(handler, op)?;
-}
-
-let default_sink_name = server.borrow_mut().take().flatten().unwrap();
-```
-
-- Retrieve default device volume with the default sink name
-
-```rust
- let device = Rc::new(RefCell::new(None));
-{
-	let device = device.clone();
-    let op = handler.introspect.get_sink_info_by_name(
-			&default_sink_name,
-            move |sink_list: ListResult<&introspect::SinkInfo>| {
-	            if let ListResult::Item(item) = sink_list {
-	                device.borrow_mut().replace(item.volume);
-                }
-            });
-    wait_for_operation(handler, op)?;
-}
-let default_device_volume = device.borrow_mut().take().unwrap();
-```
-
-- Finally print the volume to get the human readable values
-
-```rust
-default_device_volume.print() // Returns volume level in % for each channel
-```
-
-3. Notes
-- Implement graceful shutdown to avoid Address boundary error
-
-```rust
-impl Drop for Handler {
-    fn drop(&mut self) {
-        self.context.disconnect();
-        self.mainloop.quit(pulse::def::Retval(0));
-    }
-}
-```
-
-4. Honorable mentions
-- List all available devices
+- Finally list all the devices
 
 ```rust
 let list = Rc::new(RefCell::new(Vec::new()));
@@ -152,6 +98,6 @@ let list = Rc::new(RefCell::new(Vec::new()));
             });
     wait_for_operation(handler, op)?;
 }
-let device_list = list.borrow_mut().to_vec()
+let device_list = list.borrow_mut().to_vec() // Vec<(u32, ChannelVolumes)
+device_list.iter().for_each(|device| println!("{}", device.1.print()));
 ```
-

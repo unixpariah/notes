@@ -1,7 +1,7 @@
 1. Initiate threaded Mainloop and instantiate new connection context
 
 ```rust
- let mut mainloop = Mainloop::new().unwrap();
+let mut mainloop = Mainloop::new().unwrap();
 let mut context = Context::new(&mainloop, "volume-change-listener").unwrap();
 context.connect(None, ContextFlagSet::NOFLAGS, None).unwrap();
 ```
@@ -11,7 +11,7 @@ context.connect(None, ContextFlagSet::NOFLAGS, None).unwrap();
 ```rust
 loop {
     if context.get_state() == libpulse_binding::context::State::Ready {
-    break;
+	    break;
     }
 }
 ```

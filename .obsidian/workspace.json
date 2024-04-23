@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libpulseaudio by examples/Retrieving audio level of default sink.md",
+                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Libpulseaudio by examples/Listening to audio level changes.md",
+                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Libpulseaudio by examples/Listening to audio level changes.md",
+                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Libpulseaudio by examples/Listening to audio level changes.md"
+                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md"
               }
             }
           }
@@ -160,10 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5383edf9dc2f0c34",
+  "active": "a2b841f85e0f20a4",
   "lastOpenFiles": [
-    "Libpulseaudio by examples/Retrieving audio level of default sink.md",
+    "Libpulseaudio by examples/List all devices.md",
     "Libpulseaudio by examples/Listening to audio level changes.md",
+    "List all devices.md",
+    "Libpulseaudio by examples/Retrieve audio level of default sink.md",
     "Libpulseaudio by examples"
   ]
 }
