@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md",
+                "file": "Libpulseaudio/Retrieve audio level of default sink.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,13 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libpulseaudio by examples/Listening to audio level changes.md",
+                "file": "Libpulseaudio/Listening to audio level changes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b1c003b7b607fd4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wayland/Layer shell.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -77,8 +90,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md",
+                "file": "Wayland/Layer shell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md",
+                "file": "Wayland/Layer shell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Libpulseaudio by examples/Retrieve audio level of default sink.md"
+                "file": "Wayland/Layer shell.md"
               }
             }
           }
@@ -147,7 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 296.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,12 +171,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a2b841f85e0f20a4",
+  "active": "b1c003b7b607fd4a",
   "lastOpenFiles": [
-    "Libpulseaudio by examples/List all devices.md",
-    "Libpulseaudio by examples/Listening to audio level changes.md",
+    "LICENSE",
+    "Wayland/Layer shell.md~",
+    "Libpulseaudio/Listening to audio level changes.md",
+    "Wayland/Layer shell.md",
+    "Wayland",
+    "Libpulseaudio/Retrieve audio level of default sink.md",
+    "Libpulseaudio/List all devices.md",
     "List all devices.md",
-    "Libpulseaudio by examples/Retrieve audio level of default sink.md",
-    "Libpulseaudio by examples"
+    "Libpulseaudio"
   ]
 }
