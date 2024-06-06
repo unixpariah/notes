@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0b23381d16ec0428",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wayland/Layer shell.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -171,14 +183,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b1c003b7b607fd4a",
+  "active": "0b23381d16ec0428",
   "lastOpenFiles": [
-    "LICENSE",
     "Wayland/Layer shell.md~",
-    "Libpulseaudio/Listening to audio level changes.md",
+    "lua/Embedding lua.md",
     "Wayland/Layer shell.md",
-    "Wayland",
     "Libpulseaudio/Retrieve audio level of default sink.md",
+    "lua",
+    "Libpulseaudio/Listening to audio level changes.md",
+    "LICENSE",
+    "Wayland",
     "Libpulseaudio/List all devices.md",
     "List all devices.md",
     "Libpulseaudio"
